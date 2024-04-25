@@ -32,15 +32,13 @@ For steps demonstration, see materials 3.
 
 ### Go through everything and leave only source code for git upload
 
-autoreconf -iv && ./configure && make && make clean
+autoreconf -iv && ./configure && make && make clean-local
 
 ### Development
 
 autoreconf -iv && ./configure && make
 
-./server/server && ./client/client
-
-make clean && tree .
+make clean && tree . -a
 
 ### Prepare for Distribution
 
