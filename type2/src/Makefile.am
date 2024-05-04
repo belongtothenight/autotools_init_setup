@@ -9,6 +9,7 @@ common_cxxflag = -Wextra -Wall -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -W
 # - binary
 # NOTE: comment out if not needed of individual install
 # NOTE: created directory won't be removed by uninstall
+# NOTE: header ladir need to use the library name as prefix
 # ====================================
 plugindir 	= $(prefix)/lib/${project}
 lib_ladir 	= $(prefix)/include/${project}
