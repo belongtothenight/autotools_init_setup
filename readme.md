@@ -1,5 +1,7 @@
 # Compile with AutoTools
 
+[./type2](./type2) is more documented and stable version of the project.
+
 ## Requirements
 
 1. make
