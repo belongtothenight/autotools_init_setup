@@ -4,30 +4,31 @@ common_cxxflag = -Wextra -Wall -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -W
 
 # ====================================
 # install directory of public:
-# - library (.so, .a, .la)
-# - header 	(.h)
+# - plugins 		(.so, .a, .la)
+# - libtool library (.so, .a, .la)
+# - header 			(.h)
 # - binary
 # NOTE: comment out if not needed of individual install
 # NOTE: created directory won't be removed by uninstall
 # NOTE: header ladir need to use the library name as prefix
 # ====================================
-plugindir 	= $(prefix)/lib/${project}
+#plugindir 	= $(prefix)/lib/${project}
+libdir 		= $(prefix)/lib/${project}
 lib_ladir 	= $(prefix)/include/${project}
 bindir 		= $(prefix)/bin/${project}
 
 # ====================================
-# add library to install privately
-# NOTE: can't be used with public library
+# add library to install as plugin
+# NOTE: can't be used with plugin_LTLIBRARIES
 # ====================================
-#lib_LTLIBRARIES = lib.la
-## lib_LTLIBRARIES += lib2.la
+lib_LTLIBRARIES = lib.la
+# lib_LTLIBRARIES += lib2.la
 
 # ====================================
-# add library to install publicly
-# NOTE: required for public library
-# NOTE: can't be used with private library
+# add library to install as libtool library
+# NOTE: can't be used with lib_LTLIBRARIES
 # ====================================
-plugin_LTLIBRARIES = lib.la
+# plugin_LTLIBRARIES = lib.la
 # plugin_LTLIBRARIES += lib2.la
 
 # ====================================
